@@ -43,17 +43,11 @@ markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 matplotlib==3.7.5
 mdurl==0.1.2
-mediapipe==0.10.11
 ml-dtypes==0.2.0
-mysqlclient==2.2.4
 namex==0.0.7
-numpy==1.24.4
-opencv-contrib-python==4.9.0.80
-opencv-python==4.9.0.80
 opt-einsum==3.3.0
 optree==0.11.0
 packaging==24.0
-pandas==2.2.1
 pillow==10.3.0
 platformdirs==4.2.0
 protobuf==3.20.3
@@ -68,7 +62,6 @@ pytz==2024.1
 requests==2.31.0
 rich==13.7.1
 s3transfer==0.10.1
-scikit-learn==1.4.1.post1
 scipy==1.10.1
 setuptools==56.0.0
 six==1.16.0
