@@ -26,9 +26,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 SECRET_KEY = 'django-insecure-n+0+5)0ikw7j)h(ecu7q)w)%0!*o7ehmh%nqpn#7a7acy_+%&e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['porfolio-wed-master-84347eb52667.herokuapp.com','127.0.0.1']
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -63,6 +63,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'porfolio2.urls'
@@ -104,7 +106,7 @@ DATABASES = {
         'NAME': 'backend',
         'USER': 'postgres',
         'PASSWORD': 'Dang.khoi1',
-        'HOST': 'backend.czguwm0ukyif.us-east-1.rds.amazonaws.com',
+        'HOST': 'backend.czguwm0ukyif.heroku loginus-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
