@@ -16,7 +16,7 @@ class Tag(models.Model):
          return self.name
     
 class Image(models.Model):
-    images = models.ImageField(null=True , blank=True , upload_to="images")
+    images = models.ImageField(null=True , blank=True, upload_to='images')
     
 
 
