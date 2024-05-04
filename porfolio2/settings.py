@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-n+0+5)0ikw7j)h(ecu7q)w)%0!*o7ehmh%nqpn#7a7acy_+%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tobieapp.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobiapp.com', 'tobieapp.com','127.0.0.1:8000']
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -103,11 +103,11 @@ CKEDITOR_CONFIGS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'backend',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'Dang.khoi1',
-        'HOST': 'backend.czguwm0ukyif.heroku loginus-east-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        # 'PORT': '5432',
     }
 }
 DATABASES['default'] = dj_database_url.config(
