@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-n+0+5)0ikw7j)h(ecu7q)w)%0!*o7ehmh%nqpn#7a7acy_+%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['porfolio-wed-master-84347eb52667.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['tobieapp.herokuapp.com','127.0.0.1']
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
