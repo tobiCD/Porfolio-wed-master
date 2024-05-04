@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-n+0+5)0ikw7j)h(ecu7q)w)%0!*o7ehmh%nqpn#7a7acy_+%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobiapp.com', 'tobieapp.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobieapp.com', 'tobieapp.com','127.0.0.1:8000']
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -189,10 +189,10 @@ AWS_ACCESS_KEY_ID = 'AKIATCKATMODMIQ4P7EB '
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'forfolio-wed'
 AWS_S3_SIGNATURE_NAME = 's3v4',
-AWS_S3_REGION_NAME = 'us-east-1',
+AWS_S3_REGION_NAME = 'us-east-1'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL =  None
 AWS_S3_VERITY = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-DEFAULT_FILE_STORAGE = 'porfolio2.storages.MediaStore'
+DEFAULT_FILE_STORAGE = 'porfolio2.backends.s3boto3.S3Boto3Storage'
 AWS_LOCATION = 'static'
