@@ -107,14 +107,14 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'Dang.khoi1',
         'HOST': 'localhost',
-        # 'PORT': '5432',
+        'PORT': '5432',
     }
 }
 DATABASES['default'] = dj_database_url.config(
     conn_max_age=600,
     conn_health_checks=True,
 )
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
@@ -179,18 +179,24 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AWS_DEFAULT_ACL = 'public'
-AWS_ACCESS_KEY_ID = 'AKIATCKATMODMIQ4P7EB '
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'forfolio-wed'
+
+AWS_ACCESS_KEY_ID = 'AKIATCKATMODCG364YBZ '
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'forfolio-wed'
 AWS_S3_SIGNATURE_NAME = 's3v4',
 AWS_S3_REGION_NAME = 'us-east-1'
 AWS_S3_FILE_OVERWRITE = False
+AWS_S3_URL_PROTOCOL = 'https'
+AWS_S3_USE_SSL = True
+
 AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_VERITY = True
 STATICFILES_STORAGE = "storages.backends.s3.S3Storage"
