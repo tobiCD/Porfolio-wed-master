@@ -4,7 +4,7 @@
 
 
 <body>
-	<title>Tobie</title>
+	<title>{{ user.username}}</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47692315-56"></script>
 	<script>
@@ -15,7 +15,7 @@
 	  gtag('config', 'UA-47692315-56');
 	</script>
 
-
+	<link rel="icon" type="image/png" href="{% static 'images/favicon-32x32.png' %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -26,24 +26,24 @@
   	<section class="s1">
 
 		<div class="main-container">
+			{% if user.is_authenticated %} 
 			
-		
-
-	
-			<div class="login">
-				<button class="btn-login"><a href="{% url 'login' %}">Login</a></button>
-			</div>
 			<div class="greeting-wrapper">
-				<h1>Hi, I'm Khoi Chu </h1>
+				<h1>Hi, I'm {{user.username}}</h1>
 		</div>
-	
+
+		{% else %}
+			<div class="greeting-wrapper">
+				<h1>Hi, I'm Khoi Chu</h1>
+		</div>
+		{% endif %}
 
 
 			<div class="intro-wrapper">
 				{% include 'navbar.html' %}
 				
 				<div class="left-column">
-					<img id="profile-pic" src="{% static 'images/z5340072809824_10b750589b05498e8e0e0618976bfc3b.jpg'%}">
+					<img id="profile-pic" src="{% static 'images\images\z5374589310896_c32e7d3f70e98535c7c5aa8522e2416f.jpg' %}">
 					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
 					<div id="theme-options-wrapper">
 						<div data-mode="light" id="light-mode" class="theme-dot"></div>
@@ -71,23 +71,23 @@
 			</div>
 		</div>
 	</section>
-    <section class="s2">
+
+	<section class="s2">
 		<div class="main-container">
 
 			<div class="about-wrapper">
 				<div class="about-me">
 					<h4>More about me</h4>
 
-					<p>I build new projects just to tickle my brain and love teaching others how they're made.</p>
+					<p>I want to emphasize  my adaptability and willingness to learn new technologies as they emerge in the field..</p>
 
-					<p>While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.</p>
-
+					<p> I'm striving to continually improve and develop yourself</p>
 
 					<hr>
 
 					<h4>TOP EXPERTISE</h4>
 
-					<p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="{% static 'resume.pdf' %}"> Download Resume</a></p>
+					<p>"I want to become a Fullstack Developer. Below are some things I have learned": <a target="_blank" href="{% static 'resume.pdf' %}"> Download Resume</a></p>
 
 					<div id="skills">
 						<ul>
@@ -112,7 +112,7 @@
 
 
 				<div class="social-links">
-					<img id="social_img" src="{% static '\images\nhung-con-duong-deo-nguy-hiem-nhung-dep-nhat-viet-nam-p1-3.jpg' %}">
+					<img id="social_img" src="{% static 'images\images-master\nhung-con-duong-deo-nguy-hiem-nhung-dep-nhat-viet-nam-p1-3.jpg' %}">
 					<h3>Find me on FaceBook & Telegram  </h3>
 
 					<a target="_blank" href="https://www.facebook.com/profile.php?id=100018752748490">Facebook: @tobie</a>
@@ -134,7 +134,9 @@
 				{% for post in posts %}
 				<div>
 					<div class="post">
+						{% if post.thumbnail %}
 						<img class="thumbnail" src="{{post.thumbnail.url}}">
+						{%endif%}
 						<div class="post-preview">
 							<h6 class="post-title">{{post.headline}}</h6>
 							<p class="post-intro">{{post.sub_headline}}</p>
@@ -180,8 +182,6 @@
 			</form>
 		</div>
 	</section>
-
-
 	<script type="text/javascript">
 		let static = "{% static 'css' %}"
 	</script>
