@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-n+0+5)0ikw7j)h(ecu7q)w)%0!*o7ehmh%nqpn#7a7acy_+%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobiapp.com', 'tobieapp.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobiapp.com', 'tobieapp.com','127.0.0.1:8000','tobiewed.up.railway.app']
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
