@@ -21,6 +21,7 @@ urlpatterns =[
     path('login/', views.LoginView, name='login'),
     path('register/',views.Register  , name = 'register'),
     path('logout/',views.Logout  , name = 'logout'),
+    path('todolist/',views.Todolist , name='todolist')
 
 
 

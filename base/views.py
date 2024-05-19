@@ -14,7 +14,7 @@ from .filter import *
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
 from .models import *
 def home(request):
-    posts = Post.objects.filter()[0:3]
+    posts = Post.objects.filter()[0:5]
     context = {'posts': posts}
     return render(request ,'index.html',context)
 
@@ -134,3 +134,5 @@ def Register(request):
     return render(request, 'register.html',context)
                     
         
+def Todolist(request):
+    return render(request, 'list.html')

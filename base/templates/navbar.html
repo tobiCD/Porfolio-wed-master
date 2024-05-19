@@ -14,6 +14,8 @@
 	<ul id="navigation">
 		<h2  id="close-btn" style="text-align: center">X</h2>
 		<li><a href="{% url 'home' %}#contact">Account</a></li>
+		<li><a href="{% url 'todolist' %}">Todolist</a></li>
+
 		{% if user.is_authenticated %} 
 			<li><a href="{% url 'logout' %}">Logout</a></li>
 			{% else %}

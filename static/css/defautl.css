@@ -33,10 +33,10 @@ body *{
 h1, h2, h3, h4, h5, h6, strong{
 	color: var(--mainText);
 	font-family: 'Russo One', sans-serif;
-	font-weight: 500;
+	font-weight: 500; 
 }
 
-p, li, span, label, input, textarea{
+p, a , li, span, label, input, textarea{
 	color: var(--secondaryText);
 	font-family: 'Roboto Mono', monospace;
 }
@@ -44,6 +44,7 @@ p, li, span, label, input, textarea{
 a{
 	text-decoration: none;
 	color:#570808;
+	font-family :"Roboto Mono", monospace;
 }
 
 ul{
