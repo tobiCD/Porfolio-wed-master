@@ -14,7 +14,7 @@ from .filter import *
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
 from .models import *
 def home(request):
-    posts = Post.objects.filter()[0:3]
+    posts = Post.objects.filter()[0:5]
     context = {'posts': posts}
     return render(request ,'index.html',context)
 
@@ -25,7 +25,7 @@ def posts(request):
 
 	page = request.GET.get('page')
 
-	paginator = Paginator(posts, 4)
+	paginator = Paginator(posts, 3)
 
 	try:
 		posts = paginator.page(page)
