@@ -116,9 +116,12 @@ CKEDITOR_CONFIGS = {
 #         'PORT': '5432',
 #     }
 # }
-DATABASE_URL=os.getenv("DATABASE_URL")
+DATABASE_URL='postgresql://postgres:bXTbiNIzbzrZnTFnByEIpkwWUrvZFsQI@monorail.proxy.rlwy.net:18539/railway'
+
 DATABASES={
-    "default":dj_database_url.config(default=DATABASE_URL,conn_max_age=1800),
+    'default' : dj_database_url.config(default=DATABASE_URL ,conn_max_age=1800,conn_health_checks=True,)
+}
+
 }
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
