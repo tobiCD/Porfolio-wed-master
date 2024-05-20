@@ -100,20 +100,27 @@ CKEDITOR_CONFIGS = {
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Dang.khoi1',
-        'HOST': 'localhost',
-        # 'PORT': '5432',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Dang.khoi1',
+#         'HOST': 'localhost',
+#         # 'PORT': '5432',
+#     }
+# }
+# DATABASES['default'] = dj_database_url.config(
+#     conn_max_age=600,
+#     conn_health_checks=True,
+# )
+DATABASE_URL='postgresql://postgres:bXTbiNIzbzrZnTFnByEIpkwWUrvZFsQI@monorail.proxy.rlwy.net:18539/railway'
+
+DATABASES={
+    'default' : dj_database_url.config(default=DATABASE_URL ,conn_max_age=1800,conn_health_checks=True,)
 }
-DATABASES['default'] = dj_database_url.config(
-    conn_max_age=600,
-    conn_health_checks=True,
-)
+
+}
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
