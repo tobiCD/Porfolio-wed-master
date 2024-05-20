@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-n+0+5)0ikw7j)h(ecu7q)w)%0!*o7ehmh%nqpn#7a7acy_+%&e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobiapp.com', 'tobieapp.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['tobieapp.herokuapp.com','tobiapp.com', 'tobieapp.com','127.0.0.1:8000' ,'tobieapp.up.railway.app']
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -106,20 +106,20 @@ CKEDITOR_CONFIGS = {
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Dang.khoi1',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Dang.khoi1',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+DATABASE_URL=os.getenv("DATABASE_URL")
+DATABASES={
+    "default":dj_database_url.config(default=DATABASE_URL,conn_max_age=1800),
 }
-# DATABASES['default'] = dj_database_url.config(
-#     conn_max_age=600,
-#     conn_health_checks=True,
-# )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
